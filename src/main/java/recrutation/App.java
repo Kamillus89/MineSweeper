@@ -6,5 +6,6 @@ public class App
         MineSweeper mineSweeper = new MineSweeperImpl();
 
         mineSweeper.setMineField("*...\n..*.\n....");
+        System.out.println(mineSweeper.getHintField());
     }
 }
