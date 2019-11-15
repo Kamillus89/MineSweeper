@@ -33,6 +33,9 @@ public class MineSweeperImpl implements MineSweeper {
     @Override
     public String getHintField() throws IllegalStateException {
         StringBuilder hintField = new StringBuilder("");
+        if (mineFieldArray.isEmpty()) {
+            throw new IllegalStateException();
+        }
         List<List<String>> hintFieldArray = new ArrayList<>(new ArrayList<>());
 
         for (List<String> stringList : mineFieldArray) {
